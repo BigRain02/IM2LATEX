@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: im2latex-spring
+server:
+  port: 80
+
+
