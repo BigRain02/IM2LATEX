@@ -17,7 +17,7 @@ import java.io.IOException;
 public class FlaskController {
     private final FlaskService service;
 
-    @PostMapping("/flask")
+    @PostMapping("/upload")
     public LatexDto sendToFlask(@RequestParam("image")MultipartFile image) throws Exception {
         return service.sendToFlask(image);
     }

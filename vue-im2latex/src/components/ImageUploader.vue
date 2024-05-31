@@ -4,6 +4,7 @@
         <div v-if="imageUrl">
             <img :src="imageUrl" alt="Preview" />
         </div>
+        <button @click="uploadImage" :disabled="!selectedFile">Upload</button>
     </div>
 </template>
 
@@ -11,7 +12,8 @@
 export default {
     data() {
         return {
-            imageUrl: null
+            imageUrl: null,
+            selectedFile: null,
         };
     },
     methods: {
@@ -21,10 +23,31 @@ export default {
                 const reader = new FileReader();
                 reader.onload = (e) => {
                     this.imageUrl = e.target.result;
+                    this.selectedFile = file;
                 };
                 reader.readAsDataURL(file);
             } else {
                 alert('Please select an image file.');
+            }
+        },
+        async uploadImage() {
+            if (!this.selectedFile) {
+                alert("Please select a file first!");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("image", this.selectedFile);
+
+            try {
+                const response = await fetch('http://localhost:80/upload', {
+                    method: 'POST',
+                    body: formData,
+                });
+                const result = await response.json();
+                this.$emit('upload-success', result.latexStr); // 이벤트 발생
+            } catch (error) {
+                console.error("Error uploading file:", error);
             }
         }
     }
