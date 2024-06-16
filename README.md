@@ -7,7 +7,7 @@ IM2LATEX는 수식 이미지를 LaTeX 형식으로 자동 변환하여 문서 �
    ```bash
    git clone https://github.com/username/IM2LATEX.git
    ```
-2. 모델의 체크포인트를 설치합니다
+2. 초기 설정을 시작합니다.
    https://www.kaggle.com/datasets/tuannguyenvananh/image2latex-checkpoints
    ```bash
    mkdir ckpt/
