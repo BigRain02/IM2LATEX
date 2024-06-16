@@ -10,6 +10,9 @@ IM2LATEX는 수식 이미지를 LaTeX 형식으로 자동 변환하여 문서 �
 2. 모델의 체크포인트를 설치합니다
    https://www.kaggle.com/datasets/tuannguyenvananh/image2latex-checkpoints
    ```bash
+   mkdir ckpt/
+   mkdir flask/
+   mkdir image/
    cd flask/ckpt
    Conv_BiLSTM_LSTM.ckpt 저장
    ```
@@ -25,6 +28,7 @@ IM2LATEX는 수식 이미지를 LaTeX 형식으로 자동 변환하여 문서 �
 5. vue.js를 빌드합니다.
    ```bash
    cd vue-im2latex
+   npm install vue
    npm run build
    ```
 6. Im2latexSpringApplication을 실행합니다.
