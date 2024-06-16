@@ -10,11 +10,11 @@ IM2LATEX는 수식 이미지를 LaTeX 형식으로 자동 변환하여 문서 �
 2. 초기 설정을 시작합니다.
    https://www.kaggle.com/datasets/tuannguyenvananh/image2latex-checkpoints
    ```bash
+   cd flask
    mkdir ckpt/
    mkdir flask/
    mkdir image/
-   cd flask/ckpt
-   Conv_BiLSTM_LSTM.ckpt 저장
+   ckpt/에 Conv_BiLSTM_LSTM.ckpt 저장
    ```
 3. 필요한 의존성을 설치합니다.
    ```bash
