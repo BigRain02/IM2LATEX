@@ -22,7 +22,12 @@ IM2LATEX는 수식 이미지를 LaTeX 형식으로 자동 변환하여 문서 �
    ```bash
    python app.py
    ```
-5. Im2latexSpringApplication을 실행합니다.
+5. vue.js를 빌드합니다.
+   ```bash
+   cd vue-im2latex
+   npm run build
+   ```
+6. Im2latexSpringApplication을 실행합니다.
 
 
 ## 사용 방법
